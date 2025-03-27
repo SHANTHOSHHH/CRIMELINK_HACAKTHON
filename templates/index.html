@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Query Chatbot</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script defer src="static/script.js"></script>
+</head>
+<body>
+
+<!-- Hamburger icon (menu toggle) -->
+<div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
+
+<!-- Sidebar content -->
+<div class="sidebar">
+    <ul>
+        <li><a href="/" data-section="home">🏠 Home</a></li>
+        <li><a href="/add_case" data-section="addcases">📊 Add Cases</a></li>
+        <li><a href="/search" data-section="searchCases">🔍 Search Cases</a></li>
+        <li class="settings"><a href="#" data-section="settings">⚙️ Settings</a></li>
+    </ul>
+</div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="home" class="page">
+            <h1>Welcome to the Crime Query Chatbot</h1>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+            <!-- Chatbox -->
+            <div class="chat-container">
+                <div id="chatbox">
+                    <div class="chat-message bot">👮 Hello! How can I assist you with crime cases today?</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Type a message...">
+                    <button id="voiceInputButton"><!-- Chat Input Box with Embedded Mic -->
+                        <i class="fas fa-microphone"></i> <!-- Microphone Icon -->
+                    </button>
+                    <button id="sendButton" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i> <!-- Paper Plane Icon -->
+                    </button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Add Cases Page -->
+<div id="addcases" class="page hidden" style="margin-left: 20vw; width: 100%;">
+    <h1>📊 Add New Case</h1>
+    <div class="case-form-container">
+
+        <!-- Left Column: Suspect Details -->
+        <div class="form-column">
+            <h2>👤 Suspect Information</h2>
+            <label for="suspectPhoto" class="custom-file-upload">📸 Upload Suspect Photo</label>
+            <input type="file" id="suspectPhoto" name="suspectPhoto" accept="image/*" style="display: none;">
+            <img id="photoPreview" src="" alt="Preview" style="display:none; width: 100px; height: 100px; margin-top: 10px;"> 
+
+            <label for="suspectName">Suspect Name:</label>
+            <input type="text" id="suspectName" name="suspectName" placeholder="Enter suspect name">
+
+            <label for="fatherName">Father Name:</label>
+            <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name">
+
+            <label for="motherName">Mother Name:</label>
+            <input type="text" id="motherName" name="motherName" placeholder="Enter mother's name">
+
+            <label for="suspectAge">Suspect Age:</label>
+            <input type="text" id="suspectAge" name="suspectAge" placeholder="Enter age">
+
+            <label for="suspectGender">Gender:</label>
+            <select id="suspectGender" name="suspectGender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="suspectDOB">Date of Birth:</label>
+            <input type="date" id="suspectDOB" name="suspectDOB">
+
+            <label for="AadhaarNumber">Aadhaar Number:</label>
+            <input type="text" id="AadhaarNumber" name="AadhaarNumber" placeholder="Enter Aadhaar number">
+
+            <label for="PhoneNumber">Phone Number:</label>
+            <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Enter phone number">
+
+            <label for="modusoperandi"> Modus Operandi:</label>
+            <input type="text" id="modusoperandi" name="modusoperandi" placeholder="Enter the Criminal's method">
+
+            <!-- Jail Record Section -->
+            <form id="jail-record-form">
+                <div id="date-fields">
+                    <div class="date-range">
+                        <label for="jail-name-1">Jail Name:</label>
+                        <input type="text" id="jail-name-1" name="jail-name[]" placeholder="Enter Jail Name" required>
+
+                        <label for="place-1">Place:</label>
+                        <input type="text" id="place-1" name="place[]" placeholder="Enter Place" required>
+
+                        <label for="from-date-1">From Date:</label>
+                        <input type="date" id="from-date-1" name="from-date[]" required>
+
+                        <label for="till-date-1">Till Date:</label>
+                        <input type="date" id="till-date-1" name="till-date[]" required>
+                    </div>
+                </div>
+                <button type="button" id="add-more" onclick="addDateRange()">Add More</button>
+            </form>
+
+        </div>
+
+        <!-- Right Column: Crime Details -->
+        <div class="form-column">
+            <h2>⚖️ Crime Information</h2>
+
+            <label for="caseTitle">Case Title:</label>
+            <input type="text" id="caseTitle" name="caseTitle" placeholder="Enter case title">
+
+            <label for="BailDetails">Bail Details:</label>
+            <textarea id="BailDetails" name="BailDetails" placeholder="Enter Bail Details"></textarea>
+
+            <label for="Firnumber">FIR Number:</label>
+            <input type="text" id="Firnumber" name="Firnumber" placeholder="Enter FIR number">
+
+            <label for="caseDetails">Case Details:</label>
+            <textarea id="caseDetails" name="caseDetails" placeholder="Enter case description"></textarea>
+
+            <label for="family_ties">Family Ties (Relatives involved in criminal activities):</label><br>
+            <textarea id="family_ties" name="family_ties" rows="4" cols="50" placeholder="Enter details about family ties in criminal activities"></textarea>
+
+            <label for="evidence_collected">Evidence Collected:</label><br>
+            <textarea id="evidence_collected" name="evidence_collected" rows="4" cols="50" placeholder="Enter details of the evidence collected"></textarea>
+
+            <!-- Evidence Photos Section -->
+            <label for="evidencePhoto" class="custom-file-upload">📸 Upload Evidence Photos</label>
+            <input type="file" id="evidencePhoto" name="evidencePhoto" accept="image/*" style="display: none;">
+
+            <!-- Crime Scene Photos Section -->
+            <label for="crimescenePhoto" class="custom-file-upload">📸 Upload Crime Scene Photo</label>
+            <input type="file" id="crimescenePhoto" name="crimescenePhoto" accept="image/*" style="display: none;">
+
+            <label for="crimeType">Crime Type:</label>
+            <select id="crimeType" name="crimeType">
+                <option value="Theft">Theft</option>
+                <option value="Assault">Assault</option>
+                <option value="Fraud">Fraud</option>
+                <option value="Homicide">Homicide</option>
+                <option value="Cybercrime">Cybercrime</option>
+                <option value="Drug Trafficking">Drug Trafficking</option>
+                <option value="Kidnapping">Kidnapping</option>
+                <option value="Human Trafficking">Human Trafficking</option>
+                <option value="Domestic Violence">Domestic Violence</option>
+                <option value="Terrorism">Terrorism</option>
+                <option value="Money Laundering">Money Laundering</option>
+                <option value="Vandalism">Vandalism</option>
+                <option value="Smuggling">Smuggling</option>
+                <option value="Illegal Firearms Possession">Illegal Firearms Possession</option>
+            </select>
+
+            <label for="wantedlevel">Wanted Level:</label>
+            <input type="number" id="wantedlevel" name="wantedlevel" step="0.5" min="0" max="10" placeholder="Enter wanted level">
+
+            <label for="officerName">Assigned Officer:</label>
+            <input type="text" id="officerName" name="officerName" placeholder="Enter officer's name">
+
+            <label for="caseStatus">Case Status:</label>
+            <select id="caseStatus" name="caseStatus">
+                <option value="open">Open</option>
+                <option value="under-investigation">Under Investigation</option>
+                <option value="closed">Closed</option>
+            </select>
+        </div>
+
+        <br>
+    </div>
+    <button onclick="saveCase()">Save Case</button>
+</div>
+
+
+
+<!-- Settings Page -->
+<div id="settings" class="page hidden"style="margin-left: 40vw; width: 100%;">
+    <h1>⚙️ Settings</h1>
+    <div class="settings-container">
+        <label>
+            <input type="checkbox" onclick="toggleDarkMode()"> Dark Mode
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="notifications"> Enable Notifications
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="soundAlerts"> Sound Alerts
+        </label>
+        <br>
+        <button onclick="saveSettings()">Save Settings</button>
+    </div>
+</div>
+
+<!-- Search Cases Section -->
+    <!-- Search Bar -->
+    <!-- Search Bar with Icon -->
+ <!-- 🔍 Search Cases Section with Icon & Recent Searches -->
+<div id="searchCases" class="page hidden" style="margin-left: 35vw; width: 100%;">
+    <h1>🔍 Search Cases</h1>
+
+    <!-- Search Bar with Voice & Icon -->
+    <div class="search-container">
+        <input type="text" id="caseSearchInput" placeholder="Search cases..." onkeyup="searchCases()" onfocus="showRecentSearches()">
+         <!-- 🎤 Voice Input Button -->
+         <button id="voiceSearchButton" class="round-button">
+            <i class="fas fa-microphone"></i>                                                
+        </button>
+        
+
+        <!-- 🔍 Search Icon Button -->
+        <button onclick="searchCases()" class="round-button">
+            <i class="fas fa-search"></i>
+        </button>
+
+        <br>
+    </div>
+        <!-- Case List -->
+    <label for="crimeType">Crime Type:</label>
+    <select id="crimeType">
+        <option value="Theft">Theft</option>
+        <option value="Assault">Assault</option>
+        <option value="Fraud">Fraud</option>
+        <option value="Homicide">Homicide</option>
+        <option value="Cybercrime">Cybercrime</option>
+        <option value="Drug Trafficking">Drug Trafficking</option>
+        <option value="Kidnapping">Kidnapping</option>
+        <option value="Human Trafficking">Human Trafficking</option>
+        <option value="Domestic Violence">Domestic Violence</option>
+        <option value="Terrorism">Terrorism</option>
+        <option value="Money Laundering">Money Laundering</option>
+        <option value="Vandalism">Vandalism</option>
+        <option value="Smuggling">Smuggling</option>
+        <option value="Illegal Firearms Possession">Illegal Firearms Possession</option>
+    </select>
+
+
+    <!-- 🔄 Recent Searches Dropdown -->
+    <div id="recentSearches" class="hidden">
+        <ul id="recentSearchList"></ul>
+    </div>
+</div>
+
+    <ul id="caseList"></ul>
+    <p id="noResultsMessage" style="color: red; display: none;">No matching cases found.</p>
+
+
+</body>
+</html>
