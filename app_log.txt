@@ -1,0 +1,108 @@
+2025-03-27 23:26:35,006 - INFO - Neo4j driver initialized successfully
+2025-03-27 23:26:35,007 - INFO - Python Version: 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)]
+2025-03-27 23:26:35,007 - INFO - Torch Version: 2.4.1+cpu
+2025-03-27 23:26:35,007 - INFO - CUDA Available: False
+2025-03-27 23:26:35,007 - ERROR - Model loading error: exception: access violation reading 0x0000000000000000
+2025-03-27 23:26:37,153 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_ecac525f FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (c:Case) REQUIRE c.FIR_number IS UNIQUE'
+2025-03-27 23:26:37,168 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_246b76be FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (s:Suspect) REQUIRE s.name IS UNIQUE'
+2025-03-27 23:26:37,179 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_5ac65598 FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (o:Officer) REQUIRE o.name IS UNIQUE'
+2025-03-27 23:26:37,190 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_8da863e8 FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (ct:CrimeType) REQUIRE ct.name IS UNIQUE'
+2025-03-27 23:26:37,190 - INFO - Neo4j constraints created successfully
+2025-03-27 23:26:37,231 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.57.82:5000
+2025-03-27 23:26:37,232 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 23:26:37,236 - INFO -  * Restarting with stat
+2025-03-27 23:26:39,993 - INFO - Neo4j driver initialized successfully
+2025-03-27 23:26:39,994 - INFO - Python Version: 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)]
+2025-03-27 23:26:39,994 - INFO - Torch Version: 2.4.1+cpu
+2025-03-27 23:26:39,994 - INFO - CUDA Available: False
+2025-03-27 23:26:39,995 - ERROR - Model loading error: exception: access violation reading 0x0000000000000000
+2025-03-27 23:26:42,067 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_ecac525f FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (c:Case) REQUIRE c.FIR_number IS UNIQUE'
+2025-03-27 23:26:42,074 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_246b76be FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (s:Suspect) REQUIRE s.name IS UNIQUE'
+2025-03-27 23:26:42,081 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_5ac65598 FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (o:Officer) REQUIRE o.name IS UNIQUE'
+2025-03-27 23:26:42,092 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_8da863e8 FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (ct:CrimeType) REQUIRE ct.name IS UNIQUE'
+2025-03-27 23:26:42,095 - INFO - Neo4j constraints created successfully
+2025-03-27 23:26:42,116 - WARNING -  * Debugger is active!
+2025-03-27 23:26:42,126 - INFO -  * Debugger PIN: 132-518-791
+2025-03-27 23:29:24,166 - INFO -  * Detected change in 'D:\\thoothukudi_police_hackathon\\crime_chatbot\\app.py', reloading
+2025-03-27 23:29:24,661 - INFO -  * Restarting with stat
+2025-03-27 23:29:27,919 - INFO - Neo4j driver initialized successfully
+2025-03-27 23:29:48,976 - INFO - Neo4j driver initialized successfully
+2025-03-27 23:38:07,486 - INFO - Neo4j driver initialized successfully
+2025-03-27 23:38:07,487 - INFO - Python Version: 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)]
+2025-03-27 23:38:07,488 - INFO - Platform: win32
+2025-03-27 23:38:07,488 - INFO - Torch Version: 2.4.1+cpu
+2025-03-27 23:38:07,488 - INFO - CUDA Available: False
+2025-03-27 23:38:07,489 - ERROR - Detailed Model Loading Error: exception: access violation reading 0x0000000000000000
+2025-03-27 23:38:07,489 - ERROR - Error Type: <class 'OSError'>
+2025-03-27 23:38:07,489 - ERROR - Error Args: ('exception: access violation reading 0x0000000000000000',)
+2025-03-27 23:38:07,490 - INFO - OS: Windows-10-10.0.26100-SP0
+2025-03-27 23:38:07,490 - INFO - Processor: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel
+2025-03-27 23:38:09,585 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_ecac525f FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (c:Case) REQUIRE c.FIR_number IS UNIQUE'
+2025-03-27 23:38:09,590 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_246b76be FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (s:Suspect) REQUIRE s.name IS UNIQUE'
+2025-03-27 23:38:09,593 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_5ac65598 FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (o:Officer) REQUIRE o.name IS UNIQUE'
+2025-03-27 23:38:09,600 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_8da863e8 FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (ct:CrimeType) REQUIRE ct.name IS UNIQUE'
+2025-03-27 23:38:09,600 - INFO - Neo4j constraints created successfully
+2025-03-27 23:38:09,635 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.57.82:5000
+2025-03-27 23:38:09,635 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 23:38:09,641 - INFO -  * Restarting with stat
+2025-03-27 23:38:12,919 - INFO - Neo4j driver initialized successfully
+2025-03-27 23:38:12,920 - INFO - Python Version: 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)]
+2025-03-27 23:38:12,920 - INFO - Platform: win32
+2025-03-27 23:38:12,921 - INFO - Torch Version: 2.4.1+cpu
+2025-03-27 23:38:12,921 - INFO - CUDA Available: False
+2025-03-27 23:38:12,922 - ERROR - Detailed Model Loading Error: exception: access violation reading 0x0000000000000000
+2025-03-27 23:38:12,922 - ERROR - Error Type: <class 'OSError'>
+2025-03-27 23:38:12,922 - ERROR - Error Args: ('exception: access violation reading 0x0000000000000000',)
+2025-03-27 23:38:12,922 - INFO - OS: Windows-10-10.0.26100-SP0
+2025-03-27 23:38:12,922 - INFO - Processor: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel
+2025-03-27 23:38:14,969 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_ecac525f FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (c:Case) REQUIRE c.FIR_number IS UNIQUE'
+2025-03-27 23:38:14,973 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_246b76be FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (s:Suspect) REQUIRE s.name IS UNIQUE'
+2025-03-27 23:38:14,977 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_5ac65598 FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (o:Officer) REQUIRE o.name IS UNIQUE'
+2025-03-27 23:38:14,997 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_8da863e8 FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (ct:CrimeType) REQUIRE ct.name IS UNIQUE'
+2025-03-27 23:38:14,998 - INFO - Neo4j constraints created successfully
+2025-03-27 23:38:15,022 - WARNING -  * Debugger is active!
+2025-03-27 23:38:15,029 - INFO -  * Debugger PIN: 132-518-791
+2025-03-28 08:01:03,613 - INFO - Neo4j driver initialized successfully
+2025-03-28 08:01:03,614 - INFO - Python Version: 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)]
+2025-03-28 08:01:03,614 - INFO - Platform: win32
+2025-03-28 08:01:03,614 - INFO - Torch Version: 2.4.1+cpu
+2025-03-28 08:01:03,615 - INFO - CUDA Available: False
+2025-03-28 08:01:03,615 - ERROR - Detailed Model Loading Error: exception: access violation reading 0x0000000000000000
+2025-03-28 08:01:03,616 - ERROR - Error Type: <class 'OSError'>
+2025-03-28 08:01:03,616 - ERROR - Error Args: ('exception: access violation reading 0x0000000000000000',)
+2025-03-28 08:01:03,617 - INFO - OS: Windows-10-10.0.26100-SP0
+2025-03-28 08:01:03,617 - INFO - Processor: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel
+2025-03-28 08:01:05,697 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_ecac525f FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (c:Case) REQUIRE c.FIR_number IS UNIQUE'
+2025-03-28 08:01:05,705 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_246b76be FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (s:Suspect) REQUIRE s.name IS UNIQUE'
+2025-03-28 08:01:05,714 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_5ac65598 FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (o:Officer) REQUIRE o.name IS UNIQUE'
+2025-03-28 08:01:05,722 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_8da863e8 FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (ct:CrimeType) REQUIRE ct.name IS UNIQUE'
+2025-03-28 08:01:05,724 - INFO - Neo4j constraints created successfully
+2025-03-28 08:01:05,789 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.99.51:5000
+2025-03-28 08:01:05,790 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 08:01:05,794 - INFO -  * Restarting with stat
+2025-03-28 08:01:08,642 - INFO - Neo4j driver initialized successfully
+2025-03-28 08:01:08,643 - INFO - Python Version: 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)]
+2025-03-28 08:01:08,643 - INFO - Platform: win32
+2025-03-28 08:01:08,644 - INFO - Torch Version: 2.4.1+cpu
+2025-03-28 08:01:08,644 - INFO - CUDA Available: False
+2025-03-28 08:01:08,644 - ERROR - Detailed Model Loading Error: exception: access violation reading 0x0000000000000000
+2025-03-28 08:01:08,645 - ERROR - Error Type: <class 'OSError'>
+2025-03-28 08:01:08,645 - ERROR - Error Args: ('exception: access violation reading 0x0000000000000000',)
+2025-03-28 08:01:08,646 - INFO - OS: Windows-10-10.0.26100-SP0
+2025-03-28 08:01:08,647 - INFO - Processor: Intel64 Family 6 Model 186 Stepping 2, GenuineIntel
+2025-03-28 08:01:10,704 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_ecac525f FOR (e:Case) REQUIRE (e.FIR_number) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (c:Case) REQUIRE c.FIR_number IS UNIQUE'
+2025-03-28 08:01:10,708 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_246b76be FOR (e:Suspect) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (s:Suspect) REQUIRE s.name IS UNIQUE'
+2025-03-28 08:01:10,712 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_5ac65598 FOR (e:Officer) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (o:Officer) REQUIRE o.name IS UNIQUE'
+2025-03-28 08:01:10,716 - INFO - Received notification from DBMS server: {severity: INFORMATION} {code: Neo.ClientNotification.Schema.IndexOrConstraintAlreadyExists} {category: SCHEMA} {title: `CREATE CONSTRAINT IF NOT EXISTS FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` has no effect.} {description: `CONSTRAINT constraint_8da863e8 FOR (e:CrimeType) REQUIRE (e.name) IS UNIQUE` already exists.} {position: None} for query: 'CREATE CONSTRAINT IF NOT EXISTS FOR (ct:CrimeType) REQUIRE ct.name IS UNIQUE'
+2025-03-28 08:01:10,717 - INFO - Neo4j constraints created successfully
+2025-03-28 08:01:10,736 - WARNING -  * Debugger is active!
+2025-03-28 08:01:10,743 - INFO -  * Debugger PIN: 132-518-791

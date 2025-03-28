@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Send message to Flask backend and get response
+// Send message to Flask backend and get response
 function sendMessage() {
     let userInput = document.getElementById("userInput").value;
     if (!userInput.trim()) return;
@@ -54,8 +55,8 @@ function sendMessage() {
     userMessage.innerText = userInput;
     chatbox.appendChild(userMessage);
 
-    // Send to backend
-    fetch('/chat', {
+    // Send request to Flask backend
+    fetch("/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput })
@@ -64,15 +65,28 @@ function sendMessage() {
     .then(data => {
         let botMessage = document.createElement("div");
         botMessage.classList.add("chat-message", "bot");
-        botMessage.innerText = data.reply;
-        chatbox.appendChild(botMessage);
 
-        chatbox.scrollTop = chatbox.scrollHeight;
+        // Check if response contains case details (object format)
+        if (typeof data.response === "object") {
+            botMessage.innerHTML = `<strong>Case Title:</strong> ${data.response["Case Title"]} <br>
+                                    <strong>Suspect Name:</strong> ${data.response["Suspect Name"]} <br>
+                                    <strong>Crime Type:</strong> ${data.response["Crime Type"]} <br>
+                                    <strong>Status:</strong> ${data.response["Status"]} <br>
+                                    <strong>FIR Number:</strong> ${data.response["FIR Number"]} <br>
+                                    <strong>Details:</strong> ${data.response["Details"]}`;
+        } else {
+            // If the response is text (NLP-generated)
+            botMessage.innerText = data.response;
+        }
+
+        chatbox.appendChild(botMessage);
+        chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to latest message
     })
     .catch(error => console.error("Error:", error));
 
-    document.getElementById("userInput").value = "";
+    document.getElementById("userInput").value = ""; // Clear input field after sending
 }
+
 
 // Function to handle Enter key for sending messages
 document.getElementById("userInput").addEventListener("keypress", function(event) {
